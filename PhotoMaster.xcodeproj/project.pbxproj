@@ -290,6 +290,9 @@
 				DEVELOPMENT_TEAM = 3V8797S66Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoMaster/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = aaa;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = aaa;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = aaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +321,9 @@
 				DEVELOPMENT_TEAM = 3V8797S66Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoMaster/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = aaa;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = aaa;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = aaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5aK-36-gtp">
+                                <rect key="frame" x="0.0" y="75" width="414" height="756"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YYb-YD-0Mf">
+                                <rect key="frame" x="0.0" y="831" width="414" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-2T-R9g">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="テキスト合成">
+                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTappedTextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZj-0g-pbs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-rs-Hey">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="イラスト合成">
+                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTappedIllustButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2L-7e-mpC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-te-0rJ">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="アップロード">
+                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTappedUploadButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGI-uc-FVC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sfh-yy-z5Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hri-St-Quo">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="カメラ">
+                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTappedCameraButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDu-wP-S7h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLJ-Km-X6i">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="アルバム">
+                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTappedAlbumButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCe-ia-pZO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sfh-yy-z5Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3lN-Jt-Lp4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YYb-YD-0Mf" secondAttribute="trailing" id="OR1-2h-s85"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5aK-36-gtp" secondAttribute="trailing" id="PSd-7r-rhF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YYb-YD-0Mf" secondAttribute="bottom" id="StH-VQ-k1e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfh-yy-z5Y" secondAttribute="trailing" id="UYC-Vx-0fm"/>
+                            <constraint firstItem="5aK-36-gtp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aTE-bM-EA6"/>
+                            <constraint firstItem="YYb-YD-0Mf" firstAttribute="top" secondItem="5aK-36-gtp" secondAttribute="bottom" id="e9q-Lc-VuN"/>
+                            <constraint firstItem="YYb-YD-0Mf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iDd-dy-uyY"/>
+                            <constraint firstItem="5aK-36-gtp" firstAttribute="top" secondItem="sfh-yy-z5Y" secondAttribute="bottom" id="psV-CF-Rjb"/>
+                            <constraint firstItem="sfh-yy-z5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qFP-uM-IQz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="5aK-36-gtp" id="kmA-dJ-quA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
